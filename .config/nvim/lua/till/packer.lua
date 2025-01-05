@@ -68,4 +68,15 @@ return require('packer').startup(function(use)
   }
 
   use('tjdevries/train.nvim')
+
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "Issafalcon/neotest-dotnet",
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter"
+    }
+  }
 end)

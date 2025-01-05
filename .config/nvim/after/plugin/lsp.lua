@@ -37,7 +37,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
           return
         end
         for _, client in pairs(clients) do
-          if client.server_capabilities.documentFormattingProvider then
+          if client.supports_method 'textDocument/formatting' then
             vim.lsp.buf.format {
               async = false,
             }
